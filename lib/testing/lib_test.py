@@ -101,4 +101,4 @@ class TestCalculator:
         sys.stdout = captured_out
         assert(calculator('a', 1, 2) == None)
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Invalid operation!\n")
+        assert(captured_out.getvalue().strip() == "Invalid operation!\n")
